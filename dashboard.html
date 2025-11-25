@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Cyperstock AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-page">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-chart-line"></i>
+                <span>Cyperstock<span class="ai-text">AI</span></span>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="predictions.html" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Predictions</span>
+            </a>
+            <a href="portfolio.html" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="news.html" class="nav-item">
+                <i class="fas fa-newspaper"></i>
+                <span>Market News</span>
+            </a>
+            <a href="dmat.html" class="nav-item">
+                <i class="fas fa-building-columns"></i>
+                <span>DMAT Account</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <div class="user-avatar">JD</div>
+                <div class="user-info">
+                    <h4>John Doe</h4>
+                    <p>Pro Plan</p>
+                </div>
+            </div>
+            <button class="btn btn-logout">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search stocks...">
+                </div>
+                <button class="icon-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+                <button class="icon-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon purple">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="stat-menu">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Total Portfolio Value</p>
+                        <h3 class="stat-value">₹12,45,890</h3>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+12.5% this month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon green">
+                            <i class="fas fa-arrow-trend-up"></i>
+                        </div>
+                        <div class="stat-menu">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Total Profit</p>
+                        <h3 class="stat-value">₹1,32,450</h3>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+8.2% this week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-menu">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Active Investments</p>
+                        <h3 class="stat-value">24</h3>
+                        <div class="stat-change neutral">
+                            <i class="fas fa-minus"></i>
+                            <span>No change</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="stat-menu">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">AI Confidence Score</p>
+                        <h3 class="stat-value">94%</h3>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+2% today</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Portfolio Chart -->
+                <div class="dashboard-card portfolio-chart">
+                    <div class="card-header">
+                        <h3>Portfolio Performance</h3>
+                        <div class="card-actions">
+                            <select class="time-range">
+                                <option>1D</option>
+                                <option>1W</option>
+                                <option selected>1M</option>
+                                <option>3M</option>
+                                <option>1Y</option>
+                                <option>ALL</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <canvas id="portfolioChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Top Predictions -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Top AI Predictions</h3>
+                        <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card-content">
+                        <div class="predictions-list">
+                            <div class="prediction-item">
+                                <div class="stock-info">
+                                    <div class="stock-logo">AAPL</div>
+                                    <div>
+                                        <h4>Apple Inc.</h4>
+                                        <p>NASDAQ</p>
+                                    </div>
+                                </div>
+                                <div class="prediction-data">
+                                    <div class="confidence">
+                                        <span class="confidence-badge high">96%</span>
+                                        <p>Confidence</p>
+                                    </div>
+                                    <div class="prediction-value positive">
+                                        <span>+5.2%</span>
+                                        <i class="fas fa-arrow-up"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="prediction-item">
+                                <div class="stock-info">
+                                    <div class="stock-logo">TSLA</div>
+                                    <div>
+                                        <h4>Tesla Inc.</h4>
+                                        <p>NASDAQ</p>
+                                    </div>
+                                </div>
+                                <div class="prediction-data">
+                                    <div class="confidence">
+                                        <span class="confidence-badge high">92%</span>
+                                        <p>Confidence</p>
+                                    </div>
+                                    <div class="prediction-value positive">
+                                        <span>+3.8%</span>
+                                        <i class="fas fa-arrow-up"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="prediction-item">
+                                <div class="stock-info">
+                                    <div class="stock-logo">GOOGL</div>
+                                    <div>
+                                        <h4>Alphabet Inc.</h4>
+                                        <p>NASDAQ</p>
+                                    </div>
+                                </div>
+                                <div class="prediction-data">
+                                    <div class="confidence">
+                                        <span class="confidence-badge medium">85%</span>
+                                        <p>Confidence</p>
+                                    </div>
+                                    <div class="prediction-value positive">
+                                        <span>+2.1%</span>
+                                        <i class="fas fa-arrow-up"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="prediction-item">
+                                <div class="stock-info">
+                                    <div class="stock-logo">MSFT</div>
+                                    <div>
+                                        <h4>Microsoft Corp.</h4>
+                                        <p>NASDAQ</p>
+                                    </div>
+                                </div>
+                                <div class="prediction-data">
+                                    <div class="confidence">
+                                        <span class="confidence-badge high">89%</span>
+                                        <p>Confidence</p>
+                                    </div>
+                                    <div class="prediction-value negative">
+                                        <span>-1.2%</span>
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Holdings -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Your Holdings</h3>
+                        <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card-content">
+                        <div class="holdings-list">
+                            <div class="holding-item">
+                                <div class="holding-info">
+                                    <div class="stock-logo">TCS</div>
+                                    <div>
+                                        <h4>Tata Consultancy</h4>
+                                        <p>50 shares</p>
+                                    </div>
+                                </div>
+                                <div class="holding-value">
+                                    <h4>₹1,82,500</h4>
+                                    <span class="change positive">+4.2%</span>
+                                </div>
+                            </div>
+
+                            <div class="holding-item">
+                                <div class="holding-info">
+                                    <div class="stock-logo">INFY</div>
+                                    <div>
+                                        <h4>Infosys Ltd.</h4>
+                                        <p>100 shares</p>
+                                    </div>
+                                </div>
+                                <div class="holding-value">
+                                    <h4>₹1,45,200</h4>
+                                    <span class="change positive">+2.8%</span>
+                                </div>
+                            </div>
+
+                            <div class="holding-item">
+                                <div class="holding-info">
+                                    <div class="stock-logo">HDFC</div>
+                                    <div>
+                                        <h4>HDFC Bank</h4>
+                                        <p>75 shares</p>
+                                    </div>
+                                </div>
+                                <div class="holding-value">
+                                    <h4>₹1,12,350</h4>
+                                    <span class="change negative">-1.5%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Alerts -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Recent Alerts</h3>
+                        <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card-content">
+                        <div class="alerts-list">
+                            <div class="alert-item">
+                                <div class="alert-icon success">
+                                    <i class="fas fa-arrow-trend-up"></i>
+                                </div>
+                                <div class="alert-content">
+                                    <h4>Buy Signal</h4>
+                                    <p>Strong buy signal detected for Reliance Industries</p>
+                                    <span class="alert-time">5 minutes ago</span>
+                                </div>
+                            </div>
+
+                            <div class="alert-item">
+                                <div class="alert-icon warning">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="alert-content">
+                                    <h4>Price Alert</h4>
+                                    <p>ICICI Bank reached your target price of ₹1,050</p>
+                                    <span class="alert-time">1 hour ago</span>
+                                </div>
+                            </div>
+
+                            <div class="alert-item">
+                                <div class="alert-icon info">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="alert-content">
+                                    <h4>Market Update</h4>
+                                    <p>Nifty 50 crossed 19,500 mark - All-time high!</p>
+                                    <span class="alert-time">2 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

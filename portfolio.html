@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Cyperstock AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-chart-line"></i>
+                <span>Cyperstock<span class="ai-text">AI</span></span>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="predictions.html" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Predictions</span>
+            </a>
+            <a href="portfolio.html" class="nav-item active">
+                <i class="fas fa-briefcase"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="news.html" class="nav-item">
+                <i class="fas fa-newspaper"></i>
+                <span>Market News</span>
+            </a>
+            <a href="dmat.html" class="nav-item">
+                <i class="fas fa-building-columns"></i>
+                <span>DMAT Account</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <div class="user-avatar">JD</div>
+                <div class="user-info">
+                    <h4>John Doe</h4>
+                    <p>Pro Plan</p>
+                </div>
+            </div>
+            <button class="btn-logout">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>My Portfolio</h1>
+            </div>
+            <div class="header-right">
+                <button class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add Investment
+                </button>
+                <button class="icon-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+                <button class="icon-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Portfolio Content -->
+        <div class="dashboard-content">
+            <!-- Portfolio Summary -->
+            <div class="portfolio-summary">
+                <div class="summary-card">
+                    <div class="summary-header">
+                        <h2>Total Portfolio Value</h2>
+                        <select class="time-range-small">
+                            <option>Today</option>
+                            <option>1W</option>
+                            <option selected>1M</option>
+                            <option>3M</option>
+                            <option>1Y</option>
+                        </select>
+                    </div>
+                    <div class="summary-value">
+                        <h1>₹12,45,890</h1>
+                        <div class="summary-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>₹1,32,450 (+11.89%)</span>
+                        </div>
+                    </div>
+                    <div class="summary-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Invested</span>
+                            <span class="stat-value">₹11,13,440</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Current Value</span>
+                            <span class="stat-value">₹12,45,890</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Returns</span>
+                            <span class="stat-value green">₹1,32,450</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Day's P&L</span>
+                            <span class="stat-value green">+₹8,450</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="allocation-card">
+                    <h3>Asset Allocation</h3>
+                    <div class="allocation-chart">
+                        <canvas id="allocationChart"></canvas>
+                    </div>
+                    <div class="allocation-legend">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #6366f1"></span>
+                            <span>Stocks (65%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #10b981"></span>
+                            <span>Mutual Funds (20%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #f59e0b"></span>
+                            <span>ETFs (10%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #3b82f6"></span>
+                            <span>Bonds (5%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Performance Chart -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Portfolio Performance</h3>
+                    <div class="card-actions">
+                        <button class="btn btn-outline btn-small">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                        <select class="time-range">
+                            <option>1W</option>
+                            <option selected>1M</option>
+                            <option>3M</option>
+                            <option>6M</option>
+                            <option>1Y</option>
+                            <option>ALL</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Holdings Table -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Holdings</h3>
+                    <div class="card-actions">
+                        <div class="search-box-small">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search holdings...">
+                        </div>
+                        <select class="filter-select-small">
+                            <option>All Holdings</option>
+                            <option>Stocks</option>
+                            <option>Mutual Funds</option>
+                            <option>ETFs</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="holdings-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Stock</th>
+                                    <th>Qty</th>
+                                    <th>Avg. Cost</th>
+                                    <th>Current Price</th>
+                                    <th>Current Value</th>
+                                    <th>P&L</th>
+                                    <th>Returns</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="table-stock-info">
+                                            <div class="stock-logo-small">TCS</div>
+                                            <div>
+                                                <strong>Tata Consultancy</strong>
+                                                <span>NSE: TCS</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>50</td>
+                                    <td>₹3,450</td>
+                                    <td>₹3,650</td>
+                                    <td>₹1,82,500</td>
+                                    <td class="positive">+₹10,000</td>
+                                    <td class="positive">+5.8%</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-icon-small" title="Buy More"><i class="fas fa-plus"></i></button>
+                                            <button class="btn-icon-small" title="Sell"><i class="fas fa-minus"></i></button>
+                                            <button class="btn-icon-small" title="Details"><i class="fas fa-chart-line"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="table-stock-info">
+                                            <div class="stock-logo-small">INFY</div>
+                                            <div>
+                                                <strong>Infosys Limited</strong>
+                                                <span>NSE: INFY</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>100</td>
+                                    <td>₹1,410</td>
+                                    <td>₹1,452</td>
+                                    <td>₹1,45,200</td>
+                                    <td class="positive">+₹4,200</td>
+                                    <td class="positive">+3.0%</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-icon-small"><i class="fas fa-plus"></i></button>
+                                            <button class="btn-icon-small"><i class="fas fa-minus"></i></button>
+                                            <button class="btn-icon-small"><i class="fas fa-chart-line"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="table-stock-info">
+                                            <div class="stock-logo-small">HDFC</div>
+                                            <div>
+                                                <strong>HDFC Bank</strong>
+                                                <span>NSE: HDFCBANK</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>75</td>
+                                    <td>₹1,515</td>
+                                    <td>₹1,497</td>
+                                    <td>₹1,12,275</td>
+                                    <td class="negative">-₹1,350</td>
+                                    <td class="negative">-1.2%</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-icon-small"><i class="fas fa-plus"></i></button>
+                                            <button class="btn-icon-small"><i class="fas fa-minus"></i></button>
+                                            <button class="btn-icon-small"><i class="fas fa-chart-line"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="table-stock-info">
+                                            <div class="stock-logo-small">REL</div>
+                                            <div>
+                                                <strong>Reliance Industries</strong>
+                                                <span>NSE: RELIANCE</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>40</td>
+                                    <td>₹2,350</td>
+                                    <td>₹2,450</td>
+                                    <td>₹98,000</td>
+                                    <td class="positive">+₹4,000</td>
+                                    <td class="positive">+4.3%</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-icon-small"><i class="fas fa-plus"></i></button>
+                                            <button class="btn-icon-small"><i class="fas fa-minus"></i></button>
+                                            <button class="btn-icon-small"><i class="fas fa-chart-line"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="table-stock-info">
+                                            <div class="stock-logo-small">ICICI</div>
+                                            <div>
+                                                <strong>ICICI Bank</strong>
+                                                <span>NSE: ICICIBANK</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>90</td>
+                                    <td>₹1,015</td>
+                                    <td>₹1,050</td>
+                                    <td>₹94,500</td>
+                                    <td class="positive">+₹3,150</td>
+                                    <td class="positive">+3.4%</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-icon-small"><i class="fas fa-plus"></i></button>
+                                            <button class="btn-icon-small"><i class="fas fa-minus"></i></button>
+                                            <button class="btn-icon-small"><i class="fas fa-chart-line"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Transactions -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Recent Transactions</h3>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card-content">
+                    <div class="transactions-list">
+                        <div class="transaction-item">
+                            <div class="transaction-icon buy">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="transaction-info">
+                                <h4>Bought TCS</h4>
+                                <p>50 shares @ ₹3,450 each</p>
+                                <span class="transaction-date">Nov 24, 2025 - 10:30 AM</span>
+                            </div>
+                            <div class="transaction-amount">
+                                <span class="amount negative">-₹1,72,500</span>
+                                <span class="status completed">Completed</span>
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon sell">
+                                <i class="fas fa-arrow-up"></i>
+                            </div>
+                            <div class="transaction-info">
+                                <h4>Sold Wipro</h4>
+                                <p>80 shares @ ₹420 each</p>
+                                <span class="transaction-date">Nov 23, 2025 - 02:15 PM</span>
+                            </div>
+                            <div class="transaction-amount">
+                                <span class="amount positive">+₹33,600</span>
+                                <span class="status completed">Completed</span>
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon buy">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="transaction-info">
+                                <h4>Bought ICICI Bank</h4>
+                                <p>90 shares @ ₹1,015 each</p>
+                                <span class="transaction-date">Nov 22, 2025 - 11:45 AM</span>
+                            </div>
+                            <div class="transaction-amount">
+                                <span class="amount negative">-₹91,350</span>
+                                <span class="status completed">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="portfolio.js"></script>
+</body>
+</html>

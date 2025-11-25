@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMAT Account - Cyperstock AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-chart-line"></i>
+                <span>Cyperstock<span class="ai-text">AI</span></span>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="predictions.html" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Predictions</span>
+            </a>
+            <a href="portfolio.html" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="news.html" class="nav-item">
+                <i class="fas fa-newspaper"></i>
+                <span>Market News</span>
+            </a>
+            <a href="dmat.html" class="nav-item active">
+                <i class="fas fa-building-columns"></i>
+                <span>DMAT Account</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <div class="user-avatar">JD</div>
+                <div class="user-info">
+                    <h4>John Doe</h4>
+                    <p>Pro Plan</p>
+                </div>
+            </div>
+            <button class="btn-logout">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>DMAT Account</h1>
+            </div>
+            <div class="header-right">
+                <button class="btn btn-primary">
+                    <i class="fas fa-link"></i> Link New Account
+                </button>
+                <button class="icon-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+                <button class="icon-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- DMAT Content -->
+        <div class="dashboard-content">
+            <!-- Connected Accounts -->
+            <div class="dmat-accounts">
+                <h2>Connected DMAT Accounts</h2>
+                <div class="accounts-grid">
+                    <div class="dmat-account-card active">
+                        <div class="account-status">
+                            <span class="status-badge active">Active</span>
+                            <button class="btn-icon-small"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                        <div class="account-header">
+                            <div class="broker-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="account-info">
+                                <h3>Zerodha</h3>
+                                <p>DMAT: 1234567890123456</p>
+                            </div>
+                        </div>
+                        <div class="account-stats">
+                            <div class="stat">
+                                <span class="label">Holdings Value</span>
+                                <span class="value">₹8,45,230</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Available Margin</span>
+                                <span class="value">₹2,50,000</span>
+                            </div>
+                        </div>
+                        <div class="account-actions">
+                            <button class="btn btn-outline btn-small">
+                                <i class="fas fa-sync"></i> Sync Now
+                            </button>
+                            <button class="btn btn-outline btn-small">
+                                <i class="fas fa-chart-simple"></i> View Details
+                            </button>
+                        </div>
+                        <div class="last-sync">
+                            <i class="fas fa-clock"></i> Last synced: 5 mins ago
+                        </div>
+                    </div>
+
+                    <div class="dmat-account-card">
+                        <div class="account-status">
+                            <span class="status-badge active">Active</span>
+                            <button class="btn-icon-small"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                        <div class="account-header">
+                            <div class="broker-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="account-info">
+                                <h3>Upstox</h3>
+                                <p>DMAT: 9876543210987654</p>
+                            </div>
+                        </div>
+                        <div class="account-stats">
+                            <div class="stat">
+                                <span class="label">Holdings Value</span>
+                                <span class="value">₹4,00,660</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Available Margin</span>
+                                <span class="value">₹1,20,000</span>
+                            </div>
+                        </div>
+                        <div class="account-actions">
+                            <button class="btn btn-outline btn-small">
+                                <i class="fas fa-sync"></i> Sync Now
+                            </button>
+                            <button class="btn btn-outline btn-small">
+                                <i class="fas fa-chart-simple"></i> View Details
+                            </button>
+                        </div>
+                        <div class="last-sync">
+                            <i class="fas fa-clock"></i> Last synced: 2 hours ago
+                        </div>
+                    </div>
+
+                    <div class="dmat-account-card add-new">
+                        <div class="add-account-content">
+                            <div class="add-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <h3>Link New DMAT Account</h3>
+                            <p>Connect another broker account to manage all investments in one place</p>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-link"></i> Link Account
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Supported Brokers -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Supported Brokers</h3>
+                    <p class="subtitle">Connect with India's leading stockbrokers</p>
+                </div>
+                <div class="card-content">
+                    <div class="brokers-grid">
+                        <div class="broker-card">
+                            <div class="broker-icon">
+                                <i class="fas fa-building-columns"></i>
+                            </div>
+                            <h4>Zerodha</h4>
+                            <p>India's largest stockbroker</p>
+                            <button class="btn btn-outline btn-small">Connect</button>
+                        </div>
+                        <div class="broker-card">
+                            <div class="broker-icon">
+                                <i class="fas fa-building-columns"></i>
+                            </div>
+                            <h4>Upstox</h4>
+                            <p>Low-cost trading platform</p>
+                            <button class="btn btn-outline btn-small">Connect</button>
+                        </div>
+                        <div class="broker-card">
+                            <div class="broker-icon">
+                                <i class="fas fa-building-columns"></i>
+                            </div>
+                            <h4>Angel One</h4>
+                            <p>Full-service broker</p>
+                            <button class="btn btn-outline btn-small">Connect</button>
+                        </div>
+                        <div class="broker-card">
+                            <div class="broker-icon">
+                                <i class="fas fa-building-columns"></i>
+                            </div>
+                            <h4>ICICI Direct</h4>
+                            <p>Bank-backed trading</p>
+                            <button class="btn btn-outline btn-small">Connect</button>
+                        </div>
+                        <div class="broker-card">
+                            <div class="broker-icon">
+                                <i class="fas fa-building-columns"></i>
+                            </div>
+                            <h4>HDFC Securities</h4>
+                            <p>Trusted by millions</p>
+                            <button class="btn btn-outline btn-small">Connect</button>
+                        </div>
+                        <div class="broker-card">
+                            <div class="broker-icon">
+                                <i class="fas fa-building-columns"></i>
+                            </div>
+                            <h4>Groww</h4>
+                            <p>Simple investing</p>
+                            <button class="btn btn-outline btn-small">Connect</button>
+                        </div>
+                        <div class="broker-card">
+                            <div class="broker-icon">
+                                <i class="fas fa-building-columns"></i>
+                            </div>
+                            <h4>Sharekhan</h4>
+                            <p>Comprehensive services</p>
+                            <button class="btn btn-outline btn-small">Connect</button>
+                        </div>
+                        <div class="broker-card">
+                            <div class="broker-icon">
+                                <i class="fas fa-building-columns"></i>
+                            </div>
+                            <h4>5paisa</h4>
+                            <p>Affordable trading</p>
+                            <button class="btn btn-outline btn-small">Connect</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security & Benefits -->
+            <div class="info-cards-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>Bank-Level Security</h3>
+                    <p>Your DMAT account credentials are encrypted with 256-bit SSL encryption and stored securely.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Auto-Sync</h3>
+                    <p>Real-time synchronization of your holdings and transactions across all connected accounts.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                    <h3>Read-Only Access</h3>
+                    <p>We only read your portfolio data. We cannot place orders or withdraw funds from your account.</p>
+                </div>
+            </div>
+
+            <!-- How to Connect -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>How to Connect Your DMAT Account</h3>
+                </div>
+                <div class="card-content">
+                    <div class="steps-horizontal">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <h4>Select Broker</h4>
+                            <p>Choose your broker from the supported list above</p>
+                        </div>
+                        <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <h4>Authorize</h4>
+                            <p>Login to your broker account to grant read-only access</p>
+                        </div>
+                        <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <h4>Sync Data</h4>
+                            <p>Your holdings will be automatically imported and synced</p>
+                        </div>
+                        <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <h4>Get Insights</h4>
+                            <p>Receive AI-powered predictions for your portfolio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Frequently Asked Questions</h3>
+                </div>
+                <div class="card-content">
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Is it safe to connect my DMAT account?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, it's completely safe. We use bank-level encryption and only request read-only access. We cannot place orders, transfer funds, or modify your account in any way.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How often is my portfolio synced?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Your portfolio is automatically synced every 5 minutes during market hours and every hour after market close. You can also manually sync anytime.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Can I connect multiple DMAT accounts?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, you can connect multiple DMAT accounts from different brokers. All your holdings will be consolidated in one view.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How do I disconnect my account?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>You can disconnect anytime by clicking the menu icon on your connected account card and selecting "Disconnect". All your data will be removed immediately.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+    <script src="dmat.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyperstock AI - Smart Stock Predictions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Cyperstock<span class="ai-text">AI</span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="signin.html" class="btn btn-outline">Sign In</a>
+                    <a href="signup.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>AI-Powered Stock Predictions for <span class="gradient-text">Smarter Investments</span></h1>
+                    <p>Harness the power of advanced machine learning to predict market trends, analyze stocks, and make informed investment decisions with confidence.</p>
+                    <div class="hero-buttons">
+                        <a href="signup.html" class="btn btn-primary btn-large">Start Free Trial</a>
+                        <a href="#how-it-works" class="btn btn-outline btn-large">
+                            <i class="fas fa-play-circle"></i> Watch Demo
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>98.5%</h3>
+                            <p>Prediction Accuracy</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50K+</h3>
+                            <p>Active Users</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1M+</h3>
+                            <p>Predictions Made</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card card-1">
+                        <div class="card-icon green">
+                            <i class="fas fa-arrow-trend-up"></i>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-label">AAPL</span>
+                            <span class="card-value green">+5.2%</span>
+                        </div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon blue">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-label">AI Confidence</span>
+                            <span class="card-value">92%</span>
+                        </div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon purple">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-label">Portfolio</span>
+                            <span class="card-value green">+12.8%</span>
+                        </div>
+                    </div>
+                    <div class="hero-chart">
+                        <canvas id="heroChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features for <span class="gradient-text">Smart Trading</span></h2>
+                <p>Everything you need to make data-driven investment decisions</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Powered Predictions</h3>
+                    <p>Advanced machine learning algorithms analyze market data to provide accurate stock predictions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-Time Analysis</h3>
+                    <p>Get instant market insights and live updates on your stock portfolio 24/7.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>Secure DMAT Integration</h3>
+                    <p>Connect your DMAT account securely and manage your investments seamlessly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon orange">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Smart Alerts</h3>
+                    <p>Receive timely notifications about market movements and trading opportunities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon red">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3>Portfolio Optimizer</h3>
+                    <p>AI-driven recommendations to optimize your portfolio for maximum returns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon cyan">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Learning Resources</h3>
+                    <p>Access tutorials, market insights, and educational content to improve your trading skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How <span class="gradient-text">Cyperstock AI</span> Works</h2>
+                <p>Get started in just three simple steps</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create Your Account</h3>
+                        <p>Sign up with email or Google and connect your DMAT account securely.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Set Your Preferences</h3>
+                        <p>Tell us about your investment goals, risk tolerance, and preferred stocks.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Get AI Predictions</h3>
+                        <p>Receive real-time predictions and insights to make smarter investment decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your <span class="gradient-text">Plan</span></h2>
+                <p>Flexible pricing for every investor</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">0</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> 5 Stock Predictions/day</li>
+                        <li><i class="fas fa-check"></i> Basic Market Analysis</li>
+                        <li><i class="fas fa-check"></i> Email Support</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Real-Time Alerts</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Portfolio Optimizer</li>
+                    </ul>
+                    <a href="signup.html" class="btn btn-outline">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">999</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Unlimited Predictions</li>
+                        <li><i class="fas fa-check"></i> Advanced AI Analysis</li>
+                        <li><i class="fas fa-check"></i> Real-Time Alerts</li>
+                        <li><i class="fas fa-check"></i> Portfolio Optimizer</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                    </ul>
+                    <a href="signup.html" class="btn btn-primary">Start Free Trial</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">2499</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Everything in Pro</li>
+                        <li><i class="fas fa-check"></i> Custom AI Models</li>
+                        <li><i class="fas fa-check"></i> API Access</li>
+                        <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
+                        <li><i class="fas fa-check"></i> 24/7 Phone Support</li>
+                    </ul>
+                    <a href="signup.html" class="btn btn-outline">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Cyperstock<span class="ai-text">AI</span></span>
+                    </div>
+                    <p>Empowering investors with AI-driven stock predictions and insights.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="predictions.html">Predictions</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="news.html">Market News</a></li>
+                        <li><a href="dmat.html">DMAT Account</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cyperstock AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

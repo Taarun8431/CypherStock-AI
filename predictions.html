@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions - Cyperstock AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-chart-line"></i>
+                <span>Cyperstock<span class="ai-text">AI</span></span>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="predictions.html" class="nav-item active">
+                <i class="fas fa-chart-bar"></i>
+                <span>Predictions</span>
+            </a>
+            <a href="portfolio.html" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="news.html" class="nav-item">
+                <i class="fas fa-newspaper"></i>
+                <span>Market News</span>
+            </a>
+            <a href="dmat.html" class="nav-item">
+                <i class="fas fa-building-columns"></i>
+                <span>DMAT Account</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <div class="user-avatar">JD</div>
+                <div class="user-info">
+                    <h4>John Doe</h4>
+                    <p>Pro Plan</p>
+                </div>
+            </div>
+            <button class="btn-logout">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>AI Predictions</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search stocks..." id="stockSearch">
+                </div>
+                <button class="icon-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+                <button class="icon-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Predictions Content -->
+        <div class="dashboard-content">
+            <!-- Filters -->
+            <div class="filters-bar">
+                <div class="filter-group">
+                    <label>Market:</label>
+                    <select class="filter-select">
+                        <option>All Markets</option>
+                        <option>NSE</option>
+                        <option>BSE</option>
+                        <option>NASDAQ</option>
+                        <option>NYSE</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Sector:</label>
+                    <select class="filter-select">
+                        <option>All Sectors</option>
+                        <option>Technology</option>
+                        <option>Finance</option>
+                        <option>Healthcare</option>
+                        <option>Energy</option>
+                        <option>Consumer</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Timeframe:</label>
+                    <select class="filter-select">
+                        <option>Today</option>
+                        <option>This Week</option>
+                        <option selected>1 Month</option>
+                        <option>3 Months</option>
+                        <option>6 Months</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Confidence:</label>
+                    <select class="filter-select">
+                        <option>All</option>
+                        <option>High (90%+)</option>
+                        <option>Medium (70-90%)</option>
+                        <option>Low (<70%)</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary">
+                    <i class="fas fa-filter"></i> Apply Filters
+                </button>
+            </div>
+
+            <!-- AI Insights Banner -->
+            <div class="insights-banner">
+                <div class="insight-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="insight-content">
+                    <h3>Today's AI Insights</h3>
+                    <p>Our AI has analyzed 5,000+ stocks and identified 24 high-confidence opportunities. Tech sector showing strong bullish signals.</p>
+                </div>
+                <div class="insight-stats">
+                    <div class="insight-stat">
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">Buy Signals</span>
+                    </div>
+                    <div class="insight-stat">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Sell Signals</span>
+                    </div>
+                    <div class="insight-stat">
+                        <span class="stat-number">94%</span>
+                        <span class="stat-label">Avg Confidence</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Predictions Grid -->
+            <div class="predictions-grid">
+                <!-- Top Prediction Card -->
+                <div class="prediction-card featured">
+                    <div class="featured-badge">
+                        <i class="fas fa-star"></i> Top Pick
+                    </div>
+                    <div class="prediction-header">
+                        <div class="stock-info-large">
+                            <div class="stock-logo-large">TCS</div>
+                            <div>
+                                <h2>Tata Consultancy Services</h2>
+                                <p>NSE: TCS | Technology</p>
+                            </div>
+                        </div>
+                        <div class="current-price">
+                            <span class="price-label">Current Price</span>
+                            <span class="price-value">₹3,650.00</span>
+                        </div>
+                    </div>
+                    <div class="prediction-body">
+                        <div class="prediction-metrics">
+                            <div class="metric">
+                                <span class="metric-label">AI Confidence</span>
+                                <div class="confidence-meter">
+                                    <div class="confidence-fill" style="width: 96%"></div>
+                                </div>
+                                <span class="metric-value">96%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Predicted Change</span>
+                                <span class="metric-value prediction-positive">+8.5%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Target Price</span>
+                                <span class="metric-value">₹3,960</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Time Horizon</span>
+                                <span class="metric-value">30 Days</span>
+                            </div>
+                        </div>
+                        <div class="prediction-reasoning">
+                            <h4><i class="fas fa-lightbulb"></i> AI Analysis</h4>
+                            <p>Strong technical indicators with bullish momentum. Positive earnings outlook and favorable sector trends. Support level at ₹3,600 with resistance at ₹3,950.</p>
+                        </div>
+                        <div class="prediction-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i> Add to Watchlist
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-chart-line"></i> View Details
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-bell"></i> Set Alert
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regular Prediction Cards -->
+                <div class="prediction-card">
+                    <div class="prediction-header-small">
+                        <div class="stock-info">
+                            <div class="stock-logo">INFY</div>
+                            <div>
+                                <h4>Infosys Limited</h4>
+                                <p>NSE: INFY</p>
+                            </div>
+                        </div>
+                        <div class="confidence-badge high">92%</div>
+                    </div>
+                    <div class="price-info">
+                        <div class="price-current">₹1,452.00</div>
+                        <div class="price-prediction positive">
+                            <i class="fas fa-arrow-up"></i> +6.2% (₹1,542)
+                        </div>
+                    </div>
+                    <div class="mini-chart">
+                        <canvas id="chart-infy"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <span class="timeframe"><i class="fas fa-clock"></i> 30 days</span>
+                        <button class="btn-icon"><i class="fas fa-plus"></i></button>
+                        <button class="btn-icon"><i class="fas fa-bell"></i></button>
+                    </div>
+                </div>
+
+                <div class="prediction-card">
+                    <div class="prediction-header-small">
+                        <div class="stock-info">
+                            <div class="stock-logo">HDFC</div>
+                            <div>
+                                <h4>HDFC Bank</h4>
+                                <p>NSE: HDFCBANK</p>
+                            </div>
+                        </div>
+                        <div class="confidence-badge high">89%</div>
+                    </div>
+                    <div class="price-info">
+                        <div class="price-current">₹1,650.00</div>
+                        <div class="price-prediction positive">
+                            <i class="fas fa-arrow-up"></i> +4.8% (₹1,729)
+                        </div>
+                    </div>
+                    <div class="mini-chart">
+                        <canvas id="chart-hdfc"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <span class="timeframe"><i class="fas fa-clock"></i> 30 days</span>
+                        <button class="btn-icon"><i class="fas fa-plus"></i></button>
+                        <button class="btn-icon"><i class="fas fa-bell"></i></button>
+                    </div>
+                </div>
+
+                <div class="prediction-card">
+                    <div class="prediction-header-small">
+                        <div class="stock-info">
+                            <div class="stock-logo">REL</div>
+                            <div>
+                                <h4>Reliance Industries</h4>
+                                <p>NSE: RELIANCE</p>
+                            </div>
+                        </div>
+                        <div class="confidence-badge medium">85%</div>
+                    </div>
+                    <div class="price-info">
+                        <div class="price-current">₹2,450.00</div>
+                        <div class="price-prediction positive">
+                            <i class="fas fa-arrow-up"></i> +5.5% (₹2,585)
+                        </div>
+                    </div>
+                    <div class="mini-chart">
+                        <canvas id="chart-rel"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <span class="timeframe"><i class="fas fa-clock"></i> 30 days</span>
+                        <button class="btn-icon"><i class="fas fa-plus"></i></button>
+                        <button class="btn-icon"><i class="fas fa-bell"></i></button>
+                    </div>
+                </div>
+
+                <div class="prediction-card">
+                    <div class="prediction-header-small">
+                        <div class="stock-info">
+                            <div class="stock-logo">AAPL</div>
+                            <div>
+                                <h4>Apple Inc.</h4>
+                                <p>NASDAQ: AAPL</p>
+                            </div>
+                        </div>
+                        <div class="confidence-badge high">94%</div>
+                    </div>
+                    <div class="price-info">
+                        <div class="price-current">$189.50</div>
+                        <div class="price-prediction positive">
+                            <i class="fas fa-arrow-up"></i> +7.2% ($203.14)
+                        </div>
+                    </div>
+                    <div class="mini-chart">
+                        <canvas id="chart-aapl"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <span class="timeframe"><i class="fas fa-clock"></i> 30 days</span>
+                        <button class="btn-icon"><i class="fas fa-plus"></i></button>
+                        <button class="btn-icon"><i class="fas fa-bell"></i></button>
+                    </div>
+                </div>
+
+                <div class="prediction-card">
+                    <div class="prediction-header-small">
+                        <div class="stock-info">
+                            <div class="stock-logo">TSLA</div>
+                            <div>
+                                <h4>Tesla Inc.</h4>
+                                <p>NASDAQ: TSLA</p>
+                            </div>
+                        </div>
+                        <div class="confidence-badge high">88%</div>
+                    </div>
+                    <div class="price-info">
+                        <div class="price-current">$242.80</div>
+                        <div class="price-prediction positive">
+                            <i class="fas fa-arrow-up"></i> +6.8% ($259.31)
+                        </div>
+                    </div>
+                    <div class="mini-chart">
+                        <canvas id="chart-tsla"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <span class="timeframe"><i class="fas fa-clock"></i> 30 days</span>
+                        <button class="btn-icon"><i class="fas fa-plus"></i></button>
+                        <button class="btn-icon"><i class="fas fa-bell"></i></button>
+                    </div>
+                </div>
+
+                <div class="prediction-card">
+                    <div class="prediction-header-small">
+                        <div class="stock-info">
+                            <div class="stock-logo">MSFT</div>
+                            <div>
+                                <h4>Microsoft Corp.</h4>
+                                <p>NASDAQ: MSFT</p>
+                            </div>
+                        </div>
+                        <div class="confidence-badge medium">82%</div>
+                    </div>
+                    <div class="price-info">
+                        <div class="price-current">$378.25</div>
+                        <div class="price-prediction negative">
+                            <i class="fas fa-arrow-down"></i> -2.1% ($370.31)
+                        </div>
+                    </div>
+                    <div class="mini-chart">
+                        <canvas id="chart-msft"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <span class="timeframe"><i class="fas fa-clock"></i> 30 days</span>
+                        <button class="btn-icon"><i class="fas fa-plus"></i></button>
+                        <button class="btn-icon"><i class="fas fa-bell"></i></button>
+                    </div>
+                </div>
+
+                <div class="prediction-card">
+                    <div class="prediction-header-small">
+                        <div class="stock-info">
+                            <div class="stock-logo">ICICI</div>
+                            <div>
+                                <h4>ICICI Bank</h4>
+                                <p>NSE: ICICIBANK</p>
+                            </div>
+                        </div>
+                        <div class="confidence-badge high">91%</div>
+                    </div>
+                    <div class="price-info">
+                        <div class="price-current">₹1,050.00</div>
+                        <div class="price-prediction positive">
+                            <i class="fas fa-arrow-up"></i> +5.8% (₹1,111)
+                        </div>
+                    </div>
+                    <div class="mini-chart">
+                        <canvas id="chart-icici"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <span class="timeframe"><i class="fas fa-clock"></i> 30 days</span>
+                        <button class="btn-icon"><i class="fas fa-plus"></i></button>
+                        <button class="btn-icon"><i class="fas fa-bell"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more">
+                <button class="btn btn-outline btn-large">
+                    <i class="fas fa-rotate"></i> Load More Predictions
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="predictions.js"></script>
+</body>
+</html>
