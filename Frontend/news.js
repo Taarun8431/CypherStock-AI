@@ -12,7 +12,6 @@ document.querySelectorAll('.news-actions .fa-bookmark').forEach(btn => {
         e.preventDefault();
         e.stopPropagation();
         btn.classList.toggle('fas');
-        
         btn.classList.toggle('far');
         
         if (btn.classList.contains('fas')) {
