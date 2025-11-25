@@ -1,8 +1,12 @@
-# Cyperstock AI - Stock Prediction Platform
+# CypherStock-AI
 
-A modern, AI-powered stock prediction platform with beautiful UI/UX design.
+CypherStock-AI is a full-stack stock forecasting system using a hybrid of K-Means for market regimes, ARIMA for time-series trends, and XGBoost for predictive modeling. Built with Flask, Python ML, and an HTML/CSS/JS frontend, it delivers real-time forecasts and interactive chart visualizations.
 
-## Features
+## Frontend - Modern UI/UX Design
+
+A beautiful, AI-powered stock prediction platform with responsive design.
+
+### Features
 
 - 🎨 Modern, responsive UI/UX design
 - 🔐 Sign In & Sign Up pages with Google Authentication
@@ -10,17 +14,21 @@ A modern, AI-powered stock prediction platform with beautiful UI/UX design.
 - 📊 Interactive dashboard with real-time data
 - 📈 AI-powered stock predictions
 - 🎯 Portfolio tracking and analysis
-- 🔔 Smart alerts and notifications
+- 📰 Market news and updates
 - 📱 Fully responsive (mobile, tablet, desktop)
 
-## Pages Included
+### Pages Included
 
 1. **index.html** - Landing page with features, pricing, and call-to-actions
 2. **signin.html** - Sign in page with email/password and Google OAuth
 3. **signup.html** - Sign up page with registration form and DMAT account field
 4. **dashboard.html** - User dashboard with portfolio, predictions, and analytics
+5. **predictions.html** - AI predictions page with confidence scores
+6. **portfolio.html** - Portfolio management with holdings and transactions
+7. **news.html** - Market news and trending topics
+8. **dmat.html** - DMAT account integration and broker connections
 
-## Technologies Used
+### Technologies Used
 
 - HTML5
 - CSS3 (Modern styling with CSS Grid & Flexbox)
@@ -28,14 +36,14 @@ A modern, AI-powered stock prediction platform with beautiful UI/UX design.
 - Chart.js (for data visualization)
 - Font Awesome (for icons)
 
-## Setup Instructions
+### Setup Instructions
 
 1. Open the project folder in your browser
 2. Start with `index.html` to see the landing page
 3. Navigate to Sign In or Sign Up pages
 4. After authentication, you'll be redirected to the dashboard
 
-## File Structure
+### File Structure
 
 ```
 CSAF/
@@ -43,33 +51,22 @@ CSAF/
 ├── signin.html         # Sign in page
 ├── signup.html         # Sign up page
 ├── dashboard.html      # User dashboard
-├── styles.css          # Main stylesheet
-├── script.js           # Landing page scripts
+├── predictions.html    # AI predictions
+├── portfolio.html      # Portfolio management
+├── news.html          # Market news
+├── dmat.html          # DMAT account
+├── styles.css         # Main stylesheet
+├── script.js          # Landing page scripts
 ├── auth.js            # Authentication logic
 ├── dashboard.js       # Dashboard functionality
-└── README.md          # This file
+├── predictions.js     # Predictions page logic
+├── portfolio.js       # Portfolio page logic
+├── news.js           # News page logic
+├── dmat.js           # DMAT page logic
+└── README.md         # This file
 ```
 
-## Features Details
-
-### Authentication
-- Email/Password sign in and sign up
-- Google OAuth integration (ready for implementation)
-- Password strength indicator
-- Form validation
-- Remember me functionality
-- DMAT account integration option
-
-### Dashboard
-- Portfolio performance charts
-- AI prediction cards with confidence scores
-- Real-time stock holdings
-- Smart alerts system
-- Responsive sidebar navigation
-- Search functionality
-- Mobile-friendly design
-
-## Color Scheme
+### Color Scheme
 
 - Primary: #6366f1 (Indigo)
 - Secondary: #10b981 (Green)
@@ -77,16 +74,7 @@ CSAF/
 - Surface: #1a1a2e (Dark Blue)
 - Text: #ffffff (White)
 
-## Future Enhancements
-
-- Backend API integration
-- Real Google OAuth implementation
-- Live stock data integration
-- Advanced charting options
-- Portfolio optimization AI
-- Mobile app version
-
-## Browser Support
+### Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
@@ -95,7 +83,7 @@ CSAF/
 
 ## License
 
-© 2025 Cyperstock AI. All rights reserved.
+© 2025 CypherStock AI. All rights reserved.
 
 ## Contact
 
